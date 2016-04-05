@@ -1,4 +1,4 @@
-#execute follwing commands
+#execute following commands to buils websdk.js file
 
 npm install
 gulp build
@@ -9,4 +9,5 @@ gulp test
 
 #For creating documentation
 ./node_modules/.bin/jsdoc app/src/sdk.js
+#with template
 ./node_modules/.bin/jsdoc -c jsdoc.conf -t ./node_modules/ink-docstrap/template
