@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/util/util.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/util/</a> util.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.62% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>41/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.82% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.62% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>41/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">254×</span>
+<span class="cline-any cline-yes">123×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">131×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">53×</span>
+<span class="cline-any cline-yes">49×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">114×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author ndarade
+ *
+ */
+&nbsp;
+var KnurldSDKUtil = KnurldSDKUtil || {};
+/**
+ * [function description]
+ * @param  {[type]} value [description]
+ * @return {[type]}       [description]
+ */
+KnurldSDKUtil.isValidObj = function(value) {
+	if (typeof value == 'undefined' || null == value) {
+		return false;
+	}
+	return true;
+};
+/**
+ * [function description]
+ * @param  {[type]} value [description]
+ * @return {[type]}       [description]
+ */
+KnurldSDKUtil.isEmpty = function(value) {
+	if (KnurldSDKUtil.isValidObj(value)) {
+		value = value.trim();
+		if ('' != value) {
+			return true;
+		}
+	}
+	return false;
+};
+/**
+ * [function description]
+ * @param  {[type]}  apiName [description]
+ * @param  {Boolean} isV1    [description]
+ * @return {[type]}          [description]
+ */
+KnurldSDKUtil.buildUrl = function(apiName, isV1) {
+	if (isV1) {
+		return KnurldConstants.HOST + KnurldConstants.V1 + apiName;
+	}
+	return KnurldConstants.HOST + apiName;
+};
+/**
+ * [function description]
+ * @param  {[type]} applicationId [description]
+ * @return {[type]}               [description]
+ */
+KnurldSDKUtil.buildApplicationIdUrl = function(applicationId) {
+	return KnurldConstants.APP_URL + applicationId;
+}
+/**
+ * [function description]
+ * @param  {[type]} consumerId [description]
+ * @return {[type]}            [description]
+ */
+KnurldSDKUtil.buildConsumerIdUrl = function(consumerId) {
+	return KnurldConstants.CONSUMER_URL + consumerId;
+}
+/**
+ * [function description]
+ * @param  {[type]} aPIExtraParams  [description]
+ * @param  {[type]} successCallBack [description]
+ * @param  {[type]} errorCallBack   [description]
+ * @return {[type]}                 [description]
+ */
+KnurldSDKUtil.getAPIParams = function(aPIExtraParams, successCallBack,
+		errorCallBack) {
+	<span class="missing-if-branch" title="else path not taken" >E</span>if (!KnurldSDKUtil.isValidObj(aPIExtraParams)) {
+		aPIExtraParams = {};
+	}
+	<span class="missing-if-branch" title="else path not taken" >E</span>if (aPIExtraParams["async"] === undefined) {
+		aPIExtraParams.async = true;
+	}
+	<span class="missing-if-branch" title="else path not taken" >E</span>if (aPIExtraParams["requestType"] === undefined) {
+		aPIExtraParams.requestType = KnurldConstants.GET;
+	}
+	<span class="missing-if-branch" title="if path not taken" >I</span>if (!KnurldSDKUtil.isFunction(successCallBack)) {
+<span class="cstat-no" title="statement not covered" >		successCallBack = KnurldSDKUtil.commonCallBackLog;</span>
+	}
+	if (!KnurldSDKUtil.isFunction(errorCallBack)) {
+		errorCallBack = KnurldSDKUtil.commonCallBackLog;
+	}
+	aPIExtraParams.successCallBack = successCallBack;
+	aPIExtraParams.errorCallBack = errorCallBack;
+	aPIExtraParams.sendDevID = true;
+	aPIExtraParams.sendAccessToken = true;
+	aPIExtraParams.contentType = KnurldConstants.CONTENT_TYPE_APPLICATION_JSON;
+	return aPIExtraParams;
+};
+/**
+ * [function description]
+ * @param  {[type]} possibleFunction [description]
+ * @return {[type]}                  [description]
+ */
+KnurldSDKUtil.isFunction = function(possibleFunction) {
+	return typeof (possibleFunction) === typeof (Function);
+};
+/**
+ * [function description]
+ * @param  {[type]} param [description]
+ * @return {[type]}       [description]
+ */
+KnurldSDKUtil.commonCallBackLog = <span class="fstat-no" title="function not covered" >function(param) {</span>
+	// TODO need to decide
+}
+/**
+ * [function description]
+ * @return {[type]} [description]
+ */
+KnurldSDKUtil.setupURL = function() {
+	KnurldConstants.APP_URL = KnurldConstants.HOST + KnurldConstants.V1
+			+ KnurldConstants.APPLICATION + KnurldConstants.URL_SEPR;
+&nbsp;
+	KnurldConstants.CONSUMER_URL = KnurldConstants.HOST + KnurldConstants.V1
+			+ KnurldConstants.CONSUMER + KnurldConstants.URL_SEPR;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 11 2016 11:50:32 GMT-0800 (PST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

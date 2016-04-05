@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Namespace: appModel</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Namespace: appModel</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="KnurldSDK.html">KnurldSDK</a>.</span>appModel</h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Dealing with the AppModel v1 management, call function in this namespace as <br/><br/><b>
+KnurldSDK.appModel.get(inputs, successCallback,
+errorCallBack);</b></div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="sdk.js.html">sdk.js</a>, <a href="sdk.js.html#line237">line 237</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(input, successCallback, errorCallBack)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    KnurldSDK.appModel.create(inputs, successCallback,
+errorCallBack);
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">javascript object which contents all the inputs for API
+    						<p></p>e.g.<p>
+    						var inputs={};</p><p>
+    						inputs.enrollmentRepeats="enrollmentRepeats"; Required.</p><p>
+    						inputs.vocabulary="vocabulary"; Required. </p><p>
+    						inputs.verificationLength="verificationLength"; Required. </p><p>
+    						inputs.threshold=threshold; Optional. </p><p>
+    						inputs.autoThresholdEnable=autoThresholdEnable; Optional. </p><p>
+    						inputs.autoThresholdClearance=autoThresholdClearance; Optional. </p><p>
+    						inputs.autoThresholdMaxRise=autoThresholdMaxRise; Optional. </p><p>
+    						inputs.useModelUpdate=useModelUpdate; Optional. </p><p>
+    						inputs.modelUpdateDailyLimit=modelUpdateDailyLimit; Optional. </p><p>
+
+    						</p>----------Info-----------<p>
+    						enrollmentRepeats:# of times the user is asked to repeat each phrase during the enrollment process. Minimum required is 3.</p><p>
+    						vocabulary:Consumers may enroll with any combination of the phrases associated with app-model. A subset of phrases will be selected for each verification.</p><p>
+    						verificationLength:# of phrases to use for verification. Recommended minimum is 3. Make sure that this is equal to or less than the number of phrases specified in the vocabulary parameter. The actual phrases asked for by the engine at verification time is a random subset of the phrase vocabulary.</p>
+    						threshold:Optional, Score threshold for verification.  Default 2 (typical range between 2 and 4)<p></p>
+    						autoThresholdEnable:Optional, If enabled, consumers who constantly score high will have their threshold adjusted automatically. (optional, default true) <p></p>
+    						autoThresholdClearance:Optional, Distance above the base threshold that a consumer's score needs to be to activate auto-adjustment. (optional, default 2.5)<p></p>
+    						autoThresholdMaxRise:Optional, Maximum value above the base threshold that a consumer's auto-adjustment will rise to. (optional, default 1.0)<p></p>
+    						useModelUpdate:Optional, Optional. Enable augmenting enrollment data with audio from successful verifications. (optional, default false)<p></p>
+    						modelUpdateDailyLimit:Optional, Maximum amount of times per day that model updating will be applied (default 1)<p></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success Call Back</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallBack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error Call Back</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="sdk.js.html">sdk.js</a>, <a href="sdk.js.html#line278">line 278</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="del"><span class="type-signature"></span>del<span class="signature">(inputs, successCallback, errorCallBack)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    KnurldSDK.appModel.del(inputs, successCallback,
+errorCallBack);
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">javascript object which contents all the inputs for API
+                e.g.<br/>
+                var inputs={};<br/>
+                inputs.appModelId = "5571c3a5c203f17826740e90192d5602"; // Do not put full url</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success Call Back</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallBack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error Call Back</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="sdk.js.html">sdk.js</a>, <a href="sdk.js.html#line430">line 430</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(inputs, successCallback, errorCallBack)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    KnurldSDK.appModel.get(inputs, successCallback,
+errorCallBack);
+API to get all app-model in the system, Pagination available
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">javascript object which contents all the inputs for API
+								e.g.<br/>
+								var inputs={};<br/>
+                inputs.limit = 10;<br/>
+                inputs.offset = 0;<br/></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success Call Back</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallBack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error Call Back</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="sdk.js.html">sdk.js</a>, <a href="sdk.js.html#line336">line 336</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getAll"><span class="type-signature"></span>getAll<span class="signature">(inputs, successCallback, errorCallBack)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    KnurldSDK.appModel.getAll(inputs, successCallback,
+errorCallBack);
+API to get all app-model in the system, if network is constraints please use get api with pagination, chunks 50 records at a time
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">javascript object which contents all the inputs for API
+                e.g.<br/>
+                var inputs={};<br/></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success Call Back</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallBack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error Call Back</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="sdk.js.html">sdk.js</a>, <a href="sdk.js.html#line368">line 368</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getAllInOneCall"><span class="type-signature"></span>getAllInOneCall<span class="signature">(inputs, successCallback, errorCallBack)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    KnurldSDK.appModel.getAllInOneCall(inputs, successCallback,
+errorCallBack);
+API to get all app-model in the system, gives 1000 records in single call, if network is constraints please use get api with pagination
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">javascript object which contents all the inputs for API
+                e.g.<br/>
+                var inputs={};<br/></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success Call Back</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallBack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error Call Back</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="sdk.js.html">sdk.js</a>, <a href="sdk.js.html#line399">line 399</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="update"><span class="type-signature"></span>update<span class="signature">(input, successCallback, errorCallBack)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    KnurldSDK.appModel.update(inputs, successCallback,
+errorCallBack);
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">javascript object which contents all the inputs for API
+    						<p></p>e.g.<p>
+    						var inputs={};</p><p>
+    						inputs.enrollmentRepeats="enrollmentRepeats"; Required.</p><p>
+    						inputs.vocabulary="vocabulary"; Required. </p><p>
+    						inputs.verificationLength="verificationLength"; Required. </p><p>
+    						inputs.threshold=threshold; Optional. </p><p>
+    						inputs.autoThresholdEnable=autoThresholdEnable; Optional. </p><p>
+    						inputs.autoThresholdClearance=autoThresholdClearance; Optional. </p><p>
+    						inputs.autoThresholdMaxRise=autoThresholdMaxRise; Optional. </p><p>
+    						inputs.useModelUpdate=useModelUpdate; Optional. </p><p>
+    						inputs.modelUpdateDailyLimit=modelUpdateDailyLimit; Optional. </p><p>
+    						inputs.appModelId = "5571c3a5c203f17826740e90192d5602";
+
+
+    						</p>----------Info-----------<p>
+    						enrollmentRepeats:# of times the user is asked to repeat each phrase during the enrollment process. Minimum required is 3.</p><p>
+    						vocabulary:Consumers may enroll with any combination of the phrases associated with app-model. A subset of phrases will be selected for each verification.</p><p>
+    						verificationLength:# of phrases to use for verification. Recommended minimum is 3. Make sure that this is equal to or less than the number of phrases specified in the vocabulary parameter. The actual phrases asked for by the engine at verification time is a random subset of the phrase vocabulary.</p>
+    						threshold:Optional, Score threshold for verification.  Default 2 (typical range between 2 and 4)<p></p>
+    						autoThresholdEnable:Optional, If enabled, consumers who constantly score high will have their threshold adjusted automatically. (optional, default true) <p></p>
+    						autoThresholdClearance:Optional, Distance above the base threshold that a consumer's score needs to be to activate auto-adjustment. (optional, default 2.5)<p></p>
+    						autoThresholdMaxRise:Optional, Maximum value above the base threshold that a consumer's auto-adjustment will rise to. (optional, default 1.0)<p></p>
+    						useModelUpdate:Optional, Optional. Enable augmenting enrollment data with audio from successful verifications. (optional, default false)<p></p>
+    						modelUpdateDailyLimit:Optional, Maximum amount of times per day that model updating will be applied (default 1)<p></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success Call Back</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallBack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error Call Back</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="sdk.js.html">sdk.js</a>, <a href="sdk.js.html#line317">line 317</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="KnurldSDK.html">KnurldSDK</a></li><li><a href="KnurldSDK.analytics.html">analytics</a></li><li><a href="KnurldSDK.appModel.html">appModel</a></li><li><a href="KnurldSDK.auth.html">auth</a></li><li><a href="KnurldSDK.call.html">call</a></li><li><a href="KnurldSDK.consumer.html">consumer</a></li><li><a href="KnurldSDK.enrollment.html">enrollment</a></li><li><a href="KnurldSDK.verification.html">verification</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Mon Apr 04 2016 21:30:33 GMT-0700 (PDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
